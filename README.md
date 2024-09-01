@@ -1,5 +1,1 @@
-C#，WPF，MVVM，CommunityToolkit.MVVM
-类似Discord的简单的即时聊天室项目，使用MVVM设计模式，communitytoolkit.mvvm 工具包开发 ，进行了多线程优化。
-自行搭建服务器和客户端，使用Tcp协议，通过System.Net.Sockets命名空间的TcpListener以及TcpClient进行客户端与服务器的连接和通讯。
-使用多线程，客户端和服务器单独开新的线程用于时刻保持监听，自行建立PacketReader和PacketBuilder类对传输数据进行二进制封装和解码，并设置了操作码（功能码）。
-客户端和服务端获取到操作码进行解析触发相应的事件，事件处理器对传入数据进行处理解析，完成相应的功能。
+实现类似Discord的简单即时在线多人聊天频道的WPF项目，基于MVVM设计模式，使用CommunityToolkit.Mvvm 工具包进行快速开发 ，对项目进行了多线程优化。项目包含自行搭建的服务器和客户端，使用Tcp协议，通过System.Net.Sockets命名空间的TcpListener以及TcpClient类进行客户端与服务器的连接和通讯。使用Task类进行多线程管理，客户端和服务器单独设置新的线程用于时刻保持监听，自行建立PacketReader和PacketBuilder类对传输数据进行二进制封装和解码，并设置了多个操作码（功能码）。客户端和服务端获取到操作码进行解析触发相应的事件，ViewMoodel中的事件处理器响应并对传入数据帧依次进行解码和处理，完成相应的功能。
